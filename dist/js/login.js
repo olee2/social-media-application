@@ -1,7 +1,7 @@
-import { apiCall } from "./components/api.js";
-import { storeUser } from "./components/storage.js";
-import { errorHtml } from "./components/error.js";
-import { setLoader } from "./components/loader.js";
+import { apiCall } from "./components/api.mjs";
+import { storeUser } from "./components/storage.mjs";
+import { errorHtml } from "./components/error.mjs";
+import { setLoader } from "./components/loader.mjs";
 
 const form = document.querySelector("form");
 const email = document.querySelector(".email");

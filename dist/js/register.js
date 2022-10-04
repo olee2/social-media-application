@@ -1,6 +1,6 @@
-import { apiCall } from "./components/api.js";
-import { setLoader } from "./components/loader.js";
-import { errorHtml } from "./components/error.js";
+import { apiCall } from "./components/api.mjs";
+import { setLoader } from "./components/loader.mjs";
+import { errorHtml } from "./components/error.mjs";
 
 const form = document.querySelector("form");
 const user = document.querySelector(".user-name");
