@@ -1,4 +1,4 @@
-import { getUser } from "./storage.js";
+import { getUser } from "./storage.mjs";
 
 /**
  * Function for verifying if there is a JWT stored in local storage and returning it.
