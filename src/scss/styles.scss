@@ -18,10 +18,6 @@ body {
   max-width: 720px;
 }
 
-.heart {
-  fill: $secondary;
-}
-
 .bi-heart-fill {
   fill: $secondary;
 }
@@ -65,8 +61,8 @@ Classes for sign in form from https://getbootstrap.com/docs/5.2/examples/sign-in
 }
 
 .register .password {
-  border-radius: 0%;
-  border-bottom: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .register .repeat-password {
