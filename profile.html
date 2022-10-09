@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="dist/css/styles.css" />
   </head>
   <body class="d-flex flex-column bg-body">
-    <nav class="navbar navbar-expand-xxl bg-light border-bottom pt-4 pb-4">
+    <nav class="navbar navbar-expand-lg bg-light border-bottom pt-4 pb-4">
       <div class="container-fluid">
         <a class="navbar-brand text-primary" href="index.html">Social</a>
         <button
@@ -51,26 +51,11 @@
     </nav>
     <div class="container-sm flex-column d-flex h-100 align-items-center">
       <div class="main-container">
-        <div class="d-flex flex-column align-items-center border-bottom pb-5">
-          <img
-            src="dist/images/man.svg"
-            class="align-self-center img-thumbnail w-50 mb-3 mt-5 rounded-circle profile-image"
-            alt=""
-          />
-          <h1 class="h1 mb-2">Oscar Elny</h1>
-          <p class="mb-2">Oslo, Norway</p>
-          <p>My name is Oscar Elny. Welcome to my profile.</p>
-          <div class="row">
-            <div class="col">
-              <button class="btn btn-primary">Follow</button>
-            </div>
-            <div class="col">
-              <button class="btn btn-outline-primary">Message</button>
-            </div>
-          </div>
-        </div>
+        <div
+          class="d-flex flex-column align-items-center border-bottom pb-5 profile-details"
+        ></div>
         <div class="mt-5 mb-5 border-bottom pb-5">
-          <h2 class="h4 mb-4">Oscar's Friends</h2>
+          <h2 class="h4 mb-4">Friends</h2>
           <div class="row">
             <div
               class="col flex-column d-flex align-items-center justify-content-between"
@@ -157,20 +142,9 @@
           </div>
           <a class="btn btn-outline-primary" href="">All Friends</a>
         </div>
-        <form action="/profile.html" class="mb-5">
-          <h2 class="h4">Post on Oscar's wall</h2>
-          <div class="mb-3">
-            <textarea
-              class="form-control"
-              id="exampleFormControlTextarea1"
-              rows="3"
-              required
-            ></textarea>
-          </div>
-          <button class="btn-outline-primary btn">Post</button>
-        </form>
         <div class="mb-4">
-          <div class="d-flex flex-column gap-3">
+          <h2 class="h4 mb-4">My posts</h2>
+          <div class="d-flex flex-column gap-3 post-container">
             <div class="card p-3">
               <div class="row">
                 <p class="col">By Oscar Elny</p>

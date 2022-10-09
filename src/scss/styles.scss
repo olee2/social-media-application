@@ -26,6 +26,41 @@ body {
   fill: $primary;
 }
 
+.single {
+  width: 100%;
+}
+
+.card img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+dialog {
+  position: absolute !important;
+  width: 100%;
+  max-width: 764px;
+  background-color: $card-bg;
+  border: none;
+  --bs-card-border-width: 1px;
+  --bs-card-border-color: var(--bs-border-color-translucent);
+  --bs-card-border-radius: 0.375rem;
+  --bs-card-box-shadow: ;
+}
+
+.delete:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+  transition: all 0.25s;
+}
+
+#sort {
+  flex: 1;
+  margin-left: 1rem;
+}
+
 /*-------------------------------------------------------------------------------
 Classes for sign in form from https://getbootstrap.com/docs/5.2/examples/sign-in/
 -------------------------------------------------------------------------------*/
