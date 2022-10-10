@@ -3,11 +3,13 @@ import { apiCall } from "./components/api.mjs";
 import { deletePost, modifyHTML } from "./components/modify-post.mjs";
 import { singlePost } from "./components/createHtml.mjs";
 import { editPost } from "./components/posts.mjs";
+import { setLoader } from "./components/loader.mjs";
 
 const postContainer = document.querySelector(".post-container");
 const id = Number(new URLSearchParams(document.location.search).get("id"));
 
 const token = loggedIn();
+postContainer.innerHTML = setLoader();
 
 const options = {
   method: "Get",
@@ -22,7 +24,7 @@ apiCall(
   options
 )
   .then((data) => {
-    postContainer.innerHTML += singlePost(data);
+    postContainer.innerHTML = singlePost(data);
     return data;
   })
   .then((data) => {

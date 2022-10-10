@@ -15,6 +15,8 @@ logOutBtn.onclick = () => logOut();
 
 profile.innerHTML = profileHtml(details);
 
+postContainer.innerHTML = setLoader();
+
 getPosts("desc").then((posts) => {
   posts = posts.filter((post) => post.author.name === details.name);
   postContainer.innerHTML = postsHtml(posts);
