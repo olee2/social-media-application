@@ -10823,15 +10823,19 @@ dialog {
   --bs-card-box-shadow: ;
 }
 
-.delete:hover {
-  cursor: pointer;
-  transform: scale(1.5);
-  transition: all 0.25s;
-}
-
 #sort {
   flex: 1;
   margin-left: 1rem;
+}
+
+.edit {
+  cursor: pointer;
+}
+
+.edit:hover,
+.delete:hover {
+  cursor: pointer;
+  color: #dc3545;
 }
 
 /*-------------------------------------------------------------------------------
