@@ -13,6 +13,10 @@ form.onsubmit = async (e) => {
   const formData = new FormData(form);
   const profile = Object.fromEntries(formData.entries());
 
+  if (!profile.avatar) {
+    delete profile.avatar;
+  }
+
   const options = {
     method: "POST",
     body: JSON.stringify(profile),

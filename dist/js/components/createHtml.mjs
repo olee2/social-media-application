@@ -27,6 +27,7 @@ export const postsHtml = (posts, imageFilter = false, searchTerm) => {
 
     return `
   <div class="card p-3 single">
+  <a href="/single-post.html?id=${id}">
     <div class="row">
       <p class="col">By ${name}</p>
       <div class="col text-end">${new Date(created).toLocaleDateString(
@@ -38,11 +39,12 @@ export const postsHtml = (posts, imageFilter = false, searchTerm) => {
         }
       )}</div>
     </div>
-    <h3 class="h4"><a href="/single-post.html?id=${id}">${title}</a></h3>
+    <h3 class="h4">${title}</h3>
     <p>
       ${body}
     </p>
     ${isMedia(media)}
+    </a>
     <div class="d-flex justify-content-between">
     <div class="d-flex">
       <div class="d-flex align-items-center me-5">
@@ -150,6 +152,7 @@ export const singlePost = (post) => {
   </div>
   <dialog>
   <h1 class="h2 text-primary mb-3">Edit post</h1>
+  <div class="signal"></div>
     <form class="col-12 edit-form">
       <div class="mb-3">
         <label for="title" class="form-label">Title</label>

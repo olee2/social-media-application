@@ -16,6 +16,8 @@ body {
 
 .main-container {
   max-width: 720px;
+  width: 100%;
+  flex: 1;
 }
 
 .bi-heart-fill {
@@ -28,14 +30,28 @@ body {
 
 .single {
   width: 100%;
+  max-width: 100%;
 }
 
 .card img {
   width: 100%;
 }
 
+.card h3 {
+  width: 100%;
+}
+
+.avatar-container {
+  padding: 0;
+}
+
+.post-container {
+  width: 100%;
+}
+
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 dialog {

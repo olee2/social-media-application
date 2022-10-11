@@ -3,11 +3,14 @@ import { apiCall } from "./components/api.mjs";
 import { deletePost, modifyHTML } from "./components/modify-post.mjs";
 import { singlePost } from "./components/createHtml.mjs";
 import { editPost } from "./components/posts.mjs";
+import { setLoader } from "./components/loader.mjs";
+import { errorHtml } from "./components/error.mjs";
 
 const postContainer = document.querySelector(".post-container");
 const id = Number(new URLSearchParams(document.location.search).get("id"));
 
 const token = loggedIn();
+postContainer.innerHTML = setLoader();
 
 const options = {
   method: "Get",
@@ -22,7 +25,7 @@ apiCall(
   options
 )
   .then((data) => {
-    postContainer.innerHTML += singlePost(data);
+    postContainer.innerHTML = singlePost(data);
     return data;
   })
   .then((data) => {
@@ -34,6 +37,7 @@ apiCall(
     const editTitle = document.getElementById("edit-title");
     const editMessage = document.getElementById("edit-message");
     const editUrl = document.getElementById("media");
+    const signalContainer = document.querySelector(".signal");
 
     const { title, body, media } = data;
 
@@ -56,17 +60,28 @@ apiCall(
 
       editForm.onsubmit = async (e) => {
         e.preventDefault();
-        const form = e.target;
-        const formData = new FormData(form);
-        const body = Object.fromEntries(formData.entries());
 
-        if (!body.media) {
-          delete body.media;
+        try {
+          const form = e.target;
+          const formData = new FormData(form);
+          const body = Object.fromEntries(formData.entries());
+
+          if (!body.media) {
+            delete body.media;
+          }
+          await editPost(body, id);
+          modal.close();
+          editForm.reset();
+          location.reload();
+        } catch (error) {
+          const errorObj = JSON.parse(localStorage.getItem("error"));
+          signalContainer.innerHTML = errorHtml(errorObj.message);
+          localStorage.removeItem("error");
         }
-        await editPost(body, id);
-        modal.close();
-        editForm.reset();
-        location.reload();
       };
     }
+  })
+  .catch((error) => {
+    const errorObj = JSON.parse(localStorage.getItem("error"));
+    postContainer.innerHTML = errorHtml(errorObj.message);
   });
