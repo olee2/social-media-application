@@ -152,6 +152,7 @@ export const singlePost = (post) => {
   </div>
   <dialog>
   <h1 class="h2 text-primary mb-3">Edit post</h1>
+  <div class="signal"></div>
     <form class="col-12 edit-form">
       <div class="mb-3">
         <label for="title" class="form-label">Title</label>
