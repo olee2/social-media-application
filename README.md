@@ -1,5 +1,7 @@
 # JavaScript 2
 
+[Trello Board](https://trello.com/invite/b/HTljMseO/53a28ffd57204a82a575784d158ca739/js2)
+
 ## Brief
 
 You have been tasked with producing a new JavaScript front end client for an existing social media platform. The client application must be attractive and responsive, but you have an otherwise blank slate in terms of theme design language.
