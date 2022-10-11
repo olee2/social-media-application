@@ -2,6 +2,14 @@ import { modifyHTML } from "./modify-post.mjs";
 import { getUser } from "./storage.mjs";
 import { isMedia } from "./media.mjs";
 
+/**
+ * This is a function for adding creating html for all the posts on the feed.
+ * @param {array} posts An array of objects.
+ * @param {boolean} imageFilter Wether or not the user is filtering out posts without image.
+ * @param {string} searchTerm If a search term is provided, the function will look for posts titles and authors that match.
+ * @returns A string with the html for all the posts that matched the above configurations.
+ */
+
 export const postsHtml = (posts, imageFilter = false, searchTerm) => {
   if (imageFilter) {
     posts = posts.filter((post) => post.media);
@@ -86,6 +94,12 @@ export const postsHtml = (posts, imageFilter = false, searchTerm) => {
 
   return filteredPosts.join("");
 };
+
+/**
+ *
+ * @param {object} post A post object is fed into the function.
+ * @returns Html for a single post.
+ */
 
 export const singlePost = (post) => {
   const {
@@ -172,6 +186,12 @@ export const singlePost = (post) => {
   </dialog>
 `;
 };
+
+/**
+ *
+ * @param {object} profile An object with the profile details of the logged in user
+ * @returns Html for the profile.
+ */
 
 export const profileHtml = (profile) => {
   const { name, avatar } = profile;

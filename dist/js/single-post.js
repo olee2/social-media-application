@@ -1,8 +1,7 @@
 import { loggedIn } from "./components/logged-in.mjs";
 import { apiCall } from "./components/api.mjs";
-import { deletePost, modifyHTML } from "./components/modify-post.mjs";
 import { singlePost } from "./components/createHtml.mjs";
-import { editPost } from "./components/posts.mjs";
+import { editPost, deletePost } from "./components/posts.mjs";
 import { setLoader } from "./components/loader.mjs";
 import { errorHtml } from "./components/error.mjs";
 
@@ -43,7 +42,9 @@ apiCall(
 
     if (deleteBtn) {
       deleteBtn.onclick = () => {
-        deletePost(id, token);
+        deletePost(id);
+        alert("Post deleted");
+        location.assign("../profile.html");
       };
 
       close.onclick = () => {
