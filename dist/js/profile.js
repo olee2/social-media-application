@@ -19,5 +19,10 @@ postContainer.innerHTML = setLoader();
 
 getPosts("desc").then((posts) => {
   posts = posts.filter((post) => post.author.name === details.name);
-  postContainer.innerHTML = postsHtml(posts);
+
+  if (posts.length) {
+    postContainer.innerHTML = postsHtml(posts);
+  } else {
+    postContainer.innerHTML = `<p>No posts from ${details.name}</p>`;
+  }
 });
