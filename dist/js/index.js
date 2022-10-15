@@ -1,5 +1,5 @@
-import { logOut } from "./components/log-out.mjs";
-import { loggedIn } from "./components/logged-in.mjs";
+import { logOut } from "./components/logOut.mjs";
+import { loggedIn } from "./components/loggedIn.mjs";
 import { getPosts, createPost } from "./components/posts.mjs";
 import { postsHtml } from "./components/createHtml.mjs";
 import { setLoader } from "./components/loader.mjs";

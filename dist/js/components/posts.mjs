@@ -1,5 +1,5 @@
 import { apiCall } from "./api.mjs";
-import { loggedIn } from "./logged-in.mjs";
+import { loggedIn } from "./loggedIn.mjs";
 
 const token = loggedIn();
 
