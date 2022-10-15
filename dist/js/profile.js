@@ -1,4 +1,4 @@
-import { logOut } from "./components/log-out.mjs";
+import { logOut } from "./components/logOut.mjs";
 import { profileHtml, postsHtml } from "./components/createHtml.mjs";
 import { setLoader } from "./components/loader.mjs";
 import { getUser } from "./components/storage.mjs";

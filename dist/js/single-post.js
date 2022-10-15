@@ -1,4 +1,4 @@
-import { loggedIn } from "./components/logged-in.mjs";
+import { loggedIn } from "./components/loggedIn.mjs";
 import { apiCall } from "./components/api.mjs";
 import { singlePost } from "./components/createHtml.mjs";
 import { editPost, deletePost } from "./components/posts.mjs";

@@ -1,4 +1,4 @@
-import { modifyHTML } from "./modify-post.mjs";
+import { modifyHTML } from "./modifyPost.mjs";
 import { getUser } from "./storage.mjs";
 import { isMedia } from "./media.mjs";
 
