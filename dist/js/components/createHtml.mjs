@@ -23,7 +23,7 @@ export const postsHtml = (posts, imageFilter = false, searchTerm) => {
     });
   }
 
-  let filteredPosts = posts.map((post) => {
+  const filteredPosts = posts.map((post) => {
     const {
       id,
       title,
