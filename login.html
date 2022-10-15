@@ -47,15 +47,19 @@
       </div>
     </nav>
     <main class="w-100 m-auto form-signin login">
-      <form action="/profile.html">
+      <form>
         <h1 class="mb-4 text-primary">Social</h1>
         <h2 class="h4 mb-3 fw-normal">Please sign in</h2>
+        <div class="signal"></div>
         <div class="form-floating">
           <input
             type="email"
+            name="email"
             class="form-control email"
+            title="Enter a valid (@noroff.no / @stud.noroff.no) email adress"
             id="floatingInput"
             placeholder="name@example.com"
+            pattern="^[\w\-.]+@(stud.)?noroff.no$"
             required
           />
           <label for="floatingInput">Email address</label>
@@ -63,6 +67,7 @@
         <div class="form-floating mb-3">
           <input
             type="password"
+            name="password"
             class="form-control password"
             id="floatingPassword"
             placeholder="Password"
@@ -82,5 +87,6 @@
         <p class="mt-5 mb-3 text-muted">© 2017–2022</p>
       </form>
     </main>
+    <script src="dist/js/login.js" type="module"></script>
   </body>
 </html>

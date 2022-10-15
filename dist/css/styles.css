@@ -10773,10 +10773,8 @@ body {
 
 .main-container {
   max-width: 720px;
-}
-
-.heart {
-  fill: #802b28;
+  width: 100%;
+  flex: 1;
 }
 
 .bi-heart-fill {
@@ -10785,6 +10783,59 @@ body {
 
 .bi-chat-text-fill {
   fill: #1b7f79;
+}
+
+.single {
+  width: 100%;
+  max-width: 100%;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card h3, .card .h3 {
+  width: 100%;
+}
+
+.avatar-container {
+  padding: 0;
+}
+
+.post-container {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+dialog {
+  position: absolute !important;
+  width: 100%;
+  max-width: 764px;
+  background-color: #f8f9fa;
+  border: none;
+  --bs-card-border-width: 1px;
+  --bs-card-border-color: var(--bs-border-color-translucent);
+  --bs-card-border-radius: 0.375rem;
+  --bs-card-box-shadow: ;
+}
+
+#sort {
+  flex: 1;
+  margin-left: 1rem;
+}
+
+.edit {
+  cursor: pointer;
+}
+
+.edit:hover,
+.delete:hover {
+  cursor: pointer;
+  color: #dc3545;
 }
 
 /*-------------------------------------------------------------------------------
@@ -10822,8 +10873,8 @@ Classes for sign in form from https://getbootstrap.com/docs/5.2/examples/sign-in
 }
 
 .register .password {
-  border-radius: 0%;
-  border-bottom: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .register .repeat-password {

@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Login page for Social - a social media app"
+      content="Register for Social - a social media app"
     />
-    <title>Login</title>
+    <title>Register</title>
     <link rel="stylesheet" href="dist/css/styles.css" />
   </head>
   <body
@@ -50,15 +50,19 @@
       </div>
     </nav>
     <main class="w-100 m-auto form-signin register">
-      <form action="/profile.html">
+      <form action="">
         <h1 class="mb-4 text-primary">Social</h1>
         <h2 class="h4 mb-3 fw-normal">Sign Up</h2>
+        <div class="signal"></div>
         <div class="form-floating">
           <input
             type="text"
+            name="name"
             class="form-control user-name"
             id="floatingInput"
             placeholder="Username"
+            title="Username can only contain letters, numbers and underscore (-)"
+            pattern="[\w]+"
             required
           />
           <label for="floatingInput">User name</label>
@@ -66,32 +70,38 @@
         <div class="form-floating">
           <input
             type="email"
+            name="email"
+            title="Enter a valid (@noroff.no / @stud.noroff.no) email adress"
             class="form-control email"
             id="floatingInput"
             placeholder="name@example.com"
+            pattern="^[\w\-.]+@(stud.)?noroff.no$"
             required
           />
           <label for="floatingInput">Email address</label>
         </div>
         <div class="form-floating">
           <input
-            type="password"
-            class="form-control password"
-            id="floatingPassword"
-            placeholder="Password"
-            required
+            type="url"
+            name="avatar"
+            title="Enter a valid (@noroff.no / @stud.noroff.no) email adress"
+            class="form-control email"
+            id="floatingInput"
+            placeholder="name@example.com"
           />
-          <label for="floatingPassword">Password</label>
+          <label for="floatingInput">Avatar URL</label>
         </div>
         <div class="form-floating">
           <input
             type="password"
-            class="form-control repeat-password mb-3"
+            name="password"
+            minlength="8"
+            class="form-control password mb-3"
             id="floatingConfirmPassword"
             placeholder="Password"
             required
           />
-          <label for="floatingConfirmPassword">Confirm Password</label>
+          <label for="floatingConfirmPassword">Password</label>
         </div>
         <button class="w-100 btn btn-lg btn-primary" type="submit">
           Sign Up
@@ -99,5 +109,6 @@
         <p class="mt-5 mb-3 text-muted">© 2017–2022</p>
       </form>
     </main>
+    <script src="dist/js/register.js" type="module"></script>
   </body>
 </html>
